@@ -46,6 +46,12 @@ export default antfu(
       'vue/multi-word-component-names': 'warn',
       '@eslint-community/eslint-comments/no-unlimited-disable': 'off',
       'ts/explicit-function-return-type': 'off',
+      'vue/block-order': [
+        'error',
+        {
+          order: [['template', 'script'], 'style'],
+        },
+      ],
     },
   }
 )
