@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { useAppStore } from '@/stores/app.store'
-
-const store = useAppStore()
-
-const count = computed(() => store.count)
-</script>
-
 <template>
   <header
     aria-label="Site Header"
@@ -13,6 +5,11 @@ const count = computed(() => store.count)
   >
     Options Header
   </header>
+
+  <div class="flex gap-x-2">
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/options/bk-tabs">Tabs</RouterLink>
+  </div>
 
   <RouterView />
 
@@ -25,5 +22,13 @@ const count = computed(() => store.count)
     Options Footer
   </footer>
 </template>
+
+<script setup lang="ts">
+import { useAppStore } from '@/stores/app.store'
+
+const store = useAppStore()
+
+const count = computed(() => store.count)
+</script>
 
 <style scoped></style>

@@ -6,3 +6,12 @@ export const onUpdated = () => {
     url: chrome.runtime.getURL('src/setup/index.html?type=update'),
   })
 }
+
+export const notify = (title: string, message: string) => {
+  return chrome.notifications.create({
+    type: 'basic',
+    iconUrl: 'src/assets/logo.png',
+    title,
+    message,
+  })
+}

@@ -5,7 +5,24 @@
     <p>Vesion: {{ version }}</p>
     <p>Display name: {{ displayName }}</p>
 
+    <h2>Book</h2>
+
     <div class="flex gap-x-2 justify-center">
+      <button
+        class="btn btn-info btn-sm"
+        @click="onProcessBook"
+      >Process</button>
+    </div>
+
+    <div class="flex gap-x-2 justify-center">
+      <button
+        class="btn btn-info btn-sm"
+        @click="onOptions"
+      >Options</button>
+    </div>
+
+    <!--    <hr />-->
+    <!--    <div class="flex gap-x-2 justify-center">
       <button
         class="btn btn-primary"
         @click="store.increment"
@@ -18,28 +35,40 @@
       >
         Decrement
       </button>
-    </div>
+    </div>-->
 
-    <RouterLink
+    <!--    <RouterLink
       class="underline"
       to="/common/about"
     >
       About
-    </RouterLink>
+    </RouterLink>-->
   </div>
 </template>
 
-
 <script setup lang="ts">
-import { useAppStore } from '@/stores/app.store'
+// import { useAppStore } from '@/stores/app.store'
+
+import { useProcessBookStore } from '@/stores/process-book.store'
+import { EMessageEvent } from '@/types/enums'
+
 
 const version = __VERSION__
 const displayName = __DISPLAY_NAME__
 
-const store = useAppStore()
+// const store = useAppStore()
+const processBookStore = useProcessBookStore()
+
+const onProcessBook = () => {
+  // chrome.runtime.sendMessage({ action: 'processBook' })
+  processBookStore.start()
+}
+
+const onOptions = () => {
+  chrome.runtime.sendMessage({ event: EMessageEvent.OPEN_OPTIONS_WINDOW })
+}
 
 </script>
-
 
 <style scoped>
 .btn {

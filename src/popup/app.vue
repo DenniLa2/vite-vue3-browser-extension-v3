@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <header
     aria-label="Site Header"
@@ -17,5 +15,7 @@
     Popup Footer
   </footer>
 </template>
+
+<script setup lang="ts"></script>
 
 <style scoped></style>
