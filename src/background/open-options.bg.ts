@@ -1,6 +1,6 @@
 /** Created by Denis Abramyan (dennila2@gmail.com) on 13.12.2024 */
 
-export const onOpenOptions = async () => {
+export const openOptions = async () => {
   const allTabs = await chrome.tabs.query({})
 
   // @ts-ignore

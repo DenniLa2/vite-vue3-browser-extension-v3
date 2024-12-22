@@ -2,3 +2,4 @@
 
 export * from './EMessageEvent.enum'
 export * from './ERequestState.enum'
+export * from './EVoiceoverSrcType.enum'

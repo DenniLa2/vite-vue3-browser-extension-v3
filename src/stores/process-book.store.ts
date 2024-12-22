@@ -1,10 +1,8 @@
-import { defineStore } from 'pinia'
 import { EMessageEvent, ERequestState } from '@/types/enums'
-import { BACK__BASE_URL } from '@/constants'
-import { notify } from '@/background/util'
+import { defineStore } from 'pinia'
 
 const _fetchList = async () => {
-  const result = await fetch(`${BACK__BASE_URL}/books/list-to-download`)
+  const result = await fetch(`${import.meta.env.VITE__BASE_API_URL}/books/list-to-download`)
   return result.json()
 }
 

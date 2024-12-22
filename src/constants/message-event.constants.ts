@@ -1,0 +1,24 @@
+/** Created by Denis Abramyan (dennila2@gmail.com) on 17.12.2024 */
+
+export const MESSAGE_EVENT = {
+  BG: {
+    _to_SCRIPT: {
+      DOWNLOAD_TORRENT: 'BG_TO_SCRIPT__DOWNLOAD_TORRENT',
+      TORRENT_DOWNLOADED: 'BG_TO_SCRIPT__TORRENT_DOWNLOADED',
+    },
+    _to_OPTIONS: {
+      ON_BOOKS_PROCESS_PROGRESS: 'BG_TO_OPTIONS__ON_BOOKS_PROCESS_PROGRESS',
+    }
+  },
+  SCRIPT: {
+    _to_BG: {
+      ADDITIONAL_BOOK_INFO: 'SCRIPT_TO_BG__ADDITIONAL_BOOK_INFO',
+      TORRENT_FILE_NAME: 'SCRIPT_TO_BG__TORRENT_FILE_NAME',
+    },
+  },
+  OPTIONS: {
+    _to_BG: {
+      PROCESS_BOOKS: 'OPTIONS_TO_BG__PROCESS_BOOKS',
+    }
+  }
+}

@@ -1,6 +1,7 @@
-import { env } from 'node:process'
 import type { ManifestV3Export } from '@crxjs/vite-plugin'
+import { env } from 'node:process'
 import packageJson from './package.json'
+
 
 const { version, name, description, displayName } = packageJson
 // Convert from Semver (example: 0.1.0-beta6)
@@ -41,8 +42,19 @@ export default {
   //   page: 'src/options/index.html',
   // },
   offline_enabled: true,
-  // host_permissions: [],
-  permissions: ['storage', 'tabs', 'background', 'notifications'],
+  'host_permissions': ['*://baza-knig.ink/*'],
+  permissions: [
+    'storage',
+    'tabs',
+    'background',
+    'notifications',
+    'downloads',
+    'scripting',
+    'alarms',
+  ],
+  externally_connectable: {
+    matches: ['*://*/*'],
+  },
   web_accessible_resources: [
     {
       matches: ['*://*/*'],
@@ -54,9 +66,9 @@ export default {
     },
   ],
   icons: {
-    16: 'src/assets/logo.png',
-    24: 'src/assets/logo.png',
-    32: 'src/assets/logo.png',
-    128: 'src/assets/logo.png',
+    16: 'src/assets/icons/icon-16.png',
+    32: 'src/assets/icons/icon-32.png',
+    48: 'src/assets/icons/icon-48.png',
+    128: 'src/assets/icons/icon-128.png',
   },
 } as ManifestV3Export

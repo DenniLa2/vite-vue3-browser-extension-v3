@@ -12,7 +12,7 @@
       />
     </div>
 
-<!--    <button
+    <!--    <button
       style="border: 1px solid #273558; border-radius: 4px; padding: 10px; margin: 10px; cursor: pointer; color: #273558;"
       @click="collectTabs"
     >
@@ -23,13 +23,11 @@
 
 
 <script setup lang="ts">
-/** Created by Denis Abramyan (dennila2@gmail.com) on 13.12.2024 */
 
-import { onMounted } from 'vue'
-import { EMessageEvent } from '@/types/enums'
-
-import ITab = chrome.tabs.Tab
 import type { IMessage } from '@/types'
+import { EMessageEvent } from '@/types/enums'
+import { onMounted } from 'vue'
+import ITab = chrome.tabs.Tab
 // interface Props {
 // }
 //
@@ -50,6 +48,7 @@ onMounted(() => {
   })
 })
 </script>
+/** Created by Denis Abramyan (dennila2@gmail.com) on 13.12.2024 */
 
 
 <style scoped lang="scss">

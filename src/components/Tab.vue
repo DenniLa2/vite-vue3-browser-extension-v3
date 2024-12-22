@@ -57,7 +57,7 @@ const title = computed(() => {
     }
   }
 
-  return 'XZ'
+  return 'unknown'
 })
 
 const closeTab = () => {

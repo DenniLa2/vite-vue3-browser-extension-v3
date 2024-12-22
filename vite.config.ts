@@ -12,6 +12,7 @@ import { defineViteConfig as define } from './define.config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  envDir: 'config/env',
   server: {
     port: 5173,
     strictPort: true,
