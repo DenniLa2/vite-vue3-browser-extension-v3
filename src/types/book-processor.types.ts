@@ -7,8 +7,8 @@ export interface IAdditionalDetails {
   year: undefined | string,
   size: undefined | string,
   bitrate: undefined | string,
-  // todo!! привести к единому виду fullDetails в модели и rest на фронте
-  rest: string[],
+  fullDetails: string
+  fullDetailsRest: string
 }
 
 export  interface IVoiceoverVariant {

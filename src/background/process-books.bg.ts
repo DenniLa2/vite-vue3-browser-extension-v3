@@ -91,11 +91,14 @@ async function _processBook(bookToProcess: IBookInfo) {
           year: undefined,
           size: undefined,
           bitrate: undefined,
-          rest: [],
+          fullDetails: '',
+          fullDetailsRest: '',
         }
 
         Array.from(dleContent).forEach((el) => {
           const text = (el.textContent ?? '') as string
+          details.fullDetails += `&${text}`
+
           if (text.includes('Автор: ')) {
             // nothing
           }
@@ -127,7 +130,7 @@ async function _processBook(bookToProcess: IBookInfo) {
             }
           }
           else {
-            details.rest.push(text)
+            details.fullDetailsRest += `&${text}`
           }
         })
 
