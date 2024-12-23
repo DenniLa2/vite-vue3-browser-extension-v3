@@ -26,3 +26,4 @@ src/types/.eslintrc-auto-import.json
 src/types/auto-imports.d.ts
 src/types/components.d.ts
 /.github/
+/Icon
