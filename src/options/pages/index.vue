@@ -1,6 +1,8 @@
 <template>
-  <div class="text-center m-4">
-    <h1 class="text-3xl font-bold underline pb-6">
+  <!--  class="text-center m-4" -->
+  <div>
+    <!--  class="text-3xl font-bold underline pb-6" -->
+    <h1>
       Hello world from Options!
     </h1>
 

@@ -3,8 +3,9 @@
     class="tab-wrapper"
     :class="`tab-wrapper-${type}`"
   >
+    <!-- btn btn-circle btn-xs btn-warning -->
     <button
-      class="btn btn-circle btn-xs btn-warning close-button"
+      class=" close-button"
       @click="closeTab"
     >
       x
@@ -22,11 +23,12 @@
 import ITab = chrome.tabs.Tab
 
 
+const props = defineProps<Props>()
+
+
 interface Props {
   tab: ITab
 }
-
-const props = defineProps<Props>()
 
 const type = computed(() => {
   if ((props.tab.title ?? '').includes('Аудиокниги')) {

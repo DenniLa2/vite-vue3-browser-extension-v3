@@ -6,10 +6,10 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    'prettier-plugin-tailwindcss',
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-    require('daisyui'),
+    // 'prettier-plugin-tailwindcss',
+    // require('@tailwindcss/typography'),
+    // require('@tailwindcss/forms'),
+    // require('daisyui'),
   ],
   // corePlugins: {
   //   preflight: false, // Disable this configuration option to prevent Tailwind from interfering with the styles of the source website

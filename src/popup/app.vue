@@ -1,16 +1,16 @@
 <template>
+  <!--    class="bg-gray-50"-->
   <header
     aria-label="Site Header"
-    class="bg-gray-50"
   >
     Popup Header
   </header>
 
   <RouterView />
 
+  <!--    class="bg-gray-50"-->
   <footer
     aria-label="Site Footer"
-    class="bg-gray-50"
   >
     Popup Footer
   </footer>

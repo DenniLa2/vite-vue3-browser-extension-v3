@@ -1,10 +1,12 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline pb-6">
+    <!-- class="text-3xl font-bold underline pb-6" -->
+    <h1>
       ORDER BOOKS!
     </h1>
 
-    <div class="flex flex-col gap-2">
+    <!-- class="flex flex-col gap-2" -->
+    <div>
       <BookToProcess
         v-for="(bookToProcess, i) in booksToProcess"
         :key="i"
@@ -13,8 +15,8 @@
       />
     </div>
 
+    <!--      class="btn btn-default btn-outline mt-2 btn-sm mx-4"-->
     <button
-      class="btn btn-default btn-outline mt-2 btn-sm mx-4"
       @click="onProcessBooks"
     >
       Process books
@@ -42,14 +44,14 @@ const booksToProcess = ref([])
 const onProcess = (bookToProcess: IBookInfo) => {
   chrome.runtime.sendMessage({
     event: MESSAGE_EVENT.OPTIONS._to_BG.PROCESS_BOOKS,
-    payload: { booksToProcess: [bookToProcess] }
+    payload: { booksToProcess: [bookToProcess] },
   })
 }
 
 const onProcessBooks = () => {
   chrome.runtime.sendMessage({
     event: MESSAGE_EVENT.OPTIONS._to_BG.PROCESS_BOOKS,
-    payload: { booksToProcess: booksToProcess.value }
+    payload: { booksToProcess: booksToProcess.value },
   })
 }
 

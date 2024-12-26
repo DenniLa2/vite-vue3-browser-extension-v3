@@ -1,6 +1,17 @@
+<template>
+  <!--  class="p-10 flex flex-col flex-1 justify-center"-->
+  <div>
+    <!--    class="flex flex-col items-center"-->
+    <div>
+      <component :is="ComponentToRender" />
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { useUrlSearchParams } from '@vueuse/core'
 import { computed, defineAsyncComponent, onMounted, ref } from 'vue'
+
 
 const params = useUrlSearchParams('history')
 const setupType = ref<'install' | 'update'>('install')
@@ -16,18 +27,20 @@ onMounted(() => {
 function updateTitle() {
   if (setupType.value === 'install') {
     document.title = `${__DISPLAY_NAME__} | Installed!`
-  } else if (setupType.value === 'update') {
+  }
+  else if (setupType.value === 'update') {
     document.title = `${__DISPLAY_NAME__} | Updated!`
-  } else {
+  }
+  else {
     document.title = __DISPLAY_NAME__
   }
 }
 
 const InstallComponent = defineAsyncComponent(
-  () => import('@/components/install.vue')
+  () => import('@/components/install.vue'),
 )
 const UpdateComponent = defineAsyncComponent(
-  () => import('@/components/update.vue')
+  () => import('@/components/update.vue'),
 )
 
 const ComponentToRender = computed(() => {
@@ -37,13 +50,5 @@ const ComponentToRender = computed(() => {
   return InstallComponent
 })
 </script>
-
-<template>
-  <div class="p-10 flex flex-col flex-1 justify-center">
-    <div class="flex flex-col items-center">
-      <component :is="ComponentToRender" />
-    </div>
-  </div>
-</template>
 
 <style lang="scss"></style>

@@ -1,5 +1,6 @@
 <template>
-  <div class="m-4">
+  <!--  class="m-4" -->
+  <div>
     <h1>Extension About Page</h1>
 
     <button @click="$router.back">
@@ -10,6 +11,7 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <style scoped></style>

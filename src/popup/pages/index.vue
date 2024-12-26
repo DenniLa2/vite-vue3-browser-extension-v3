@@ -1,24 +1,32 @@
 <template>
-  <div class="text-center m-4 flex flex-col gap-y-2">
-    <h1 class="text-3xl font-bold pb-6">Baza-knig parser</h1>
+  <!--  class="text-center m-4 flex flex-col gap-y-2"-->
+  <div>
+    <!--    class="text-3xl font-bold pb-6"-->
+    <h1>Baza-knig parser</h1>
 
     <p>Vesion: {{ version }}</p>
     <p>Display name: {{ displayName }}</p>
 
     <h2>Book</h2>
 
-    <div class="flex gap-x-2 justify-center">
+    <!--    class="flex gap-x-2 justify-center" -->
+    <div>
+      <!--        class="btn btn-info btn-sm"-->
       <button
-        class="btn btn-info btn-sm"
         @click="onProcessBook"
-      >Process</button>
+      >
+        Process
+      </button>
     </div>
 
-    <div class="flex gap-x-2 justify-center">
+    <!--    class="flex gap-x-2 justify-center"-->
+    <div>
+      <!--        class="btn btn-info btn-sm"-->
       <button
-        class="btn btn-info btn-sm"
         @click="onOptions"
-      >Options</button>
+      >
+        Options
+      </button>
     </div>
 
     <!--    <hr />-->

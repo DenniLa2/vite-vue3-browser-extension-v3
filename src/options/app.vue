@@ -6,15 +6,18 @@
       Options Header
     </header>-->
 
-  <div class="flex gap-x-2">
+  <!--  class="flex gap-x-2"-->
+  <div>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/options/bk-tabs">Tabs</RouterLink>
     <RouterLink to="/options/process-books">Process books</RouterLink>
   </div>
 
+  <Button>Some</Button>
+
   <RouterView />
 
-<!--  <p>Count: {{ count }}</p>-->
+  <!--  <p>Count: {{ count }}</p>-->
 
   <!--  <footer
       aria-label="Site Footer"

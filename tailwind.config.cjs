@@ -5,12 +5,12 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    'prettier-plugin-tailwindcss',
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-    require('daisyui'),
+    // 'prettier-plugin-tailwindcss',
+    // require('@tailwindcss/typography'),
+    // require('@tailwindcss/forms'),
+    // require('daisyui'),
   ],
-  daisyui: {
-    logs: false,
-  },
+  // daisyui: {
+  //   logs: false,
+  // },
 }

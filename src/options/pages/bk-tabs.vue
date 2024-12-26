@@ -1,10 +1,12 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline pb-6">
+    <!--  class="text-3xl font-bold underline pb-6" -->
+    <h1>
       BK-TABS!
     </h1>
 
-    <div class="flex">
+    <!--  class="flex" -->
+    <div>
       <Tab
         v-for="tab in tabs"
         :key="tab.id"
