@@ -30,7 +30,10 @@ export default {
   content_scripts: [
     {
       all_frames: true,
-      js: ['src/content-script/index.ts'],
+      js: [
+        'src/content-script/index.ts',
+        // 'src/content-scripts/file.js'
+      ],
       matches: ['*://*/*'],
       run_at: 'document_end',
     },
