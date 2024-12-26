@@ -302,6 +302,7 @@ async function _processBook(bookToProcess: IBookInfo) {
             }
 
             for (const { sectionIdx, id: voiceoverVariantId } of _data) {
+              // @ts-ignore
               document.querySelector(`#dle-content .tabs label[for=tab${sectionIdx + 1}]`)?.click?.()
 
 
@@ -313,6 +314,7 @@ async function _processBook(bookToProcess: IBookInfo) {
                 // NB! TORRENT
                 if (_a.textContent?.includes('.torrent')) {
                   setTimeout(() => {
+                    // @ts-ignore
                     _a.click()
                   }, 1000)
 
