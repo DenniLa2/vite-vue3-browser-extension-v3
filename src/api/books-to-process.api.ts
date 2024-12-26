@@ -4,7 +4,7 @@ import { bkAxios } from '@/config'
 
 
 export const fetchBooksToProcessList = async () => {
-  const res = await bkAxios.get(`/books/list-to-download`)
+  const res = await bkAxios.get(`/books/processor/to-process`)
 
   return res.data
 }

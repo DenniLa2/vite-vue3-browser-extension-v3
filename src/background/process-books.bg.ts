@@ -193,29 +193,29 @@ async function _processBook(bookToProcess: IBookInfo) {
 
               // >> SOURCES
               /** NB!
-                BASA +
-                <a1 href="" title="Скачать mp3">
-                <button class="create_archive" data-id="16511" data-voice="1">
-                <i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i>
-                .mp3
-                </button>
-                </a1>
+               BASA +
+               <a1 href="" title="Скачать mp3">
+               <button class="create_archive" data-id="16511" data-voice="1">
+               <i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i>
+               .mp3
+               </button>
+               </a1>
 
-                ENGINE ~~ARCHIVE~~
-                <a href="/engine/go.php?url=aHR0cHM6Ly9" target="_blank" onclick="yaCounter46924785.reachGoal('clickMP3'); return true;">
-                <a1 href="" title="Скачать mp3">
-                <i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i>
-                .mp3
-                </a1>
-                </a>
+               ENGINE ~~ARCHIVE~~
+               <a href="/engine/go.php?url=aHR0cHM6Ly9" target="_blank" onclick="yaCounter46924785.reachGoal('clickMP3'); return true;">
+               <a1 href="" title="Скачать mp3">
+               <i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i>
+               .mp3
+               </a1>
+               </a>
 
-                DIRECT ~~YA.DISK~~
-                <a href="https://disk.yandex.ru/d/E3rnv7dG2uQ7kA" target="_blank" onclick="yaCounter46924785.reachGoal('clickMP3'); return true;">
-                <a1 href="" title="Скачать mp3">
-                <i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i>
-                .mp3</a1>
-                </a>
-              */
+               DIRECT ~~YA.DISK~~
+               <a href="https://disk.yandex.ru/d/E3rnv7dG2uQ7kA" target="_blank" onclick="yaCounter46924785.reachGoal('clickMP3'); return true;">
+               <a1 href="" title="Скачать mp3">
+               <i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i>
+               .mp3</a1>
+               </a>
+               */
               const as = voiceoverSection.querySelectorAll('a')
               const a1s = voiceoverSection.querySelectorAll(':scope > a1')
 
@@ -275,7 +275,7 @@ async function _processBook(bookToProcess: IBookInfo) {
             }
 
             const res = await fetch(
-              `${BASE_API_URL}/books/${bookToProcess.id}/additional-info`,
+              `${BASE_API_URL}/books/processor/${bookToProcess.id}/additional-info`,
               {
                 method: 'POST',
                 headers: {
@@ -316,11 +316,10 @@ async function _processBook(bookToProcess: IBookInfo) {
                     _a.click()
                   }, 1000)
 
-                  try {// todo remove
-                    console.log(' *---> url', `${BASE_API_URL}/books/wait-torrent-file/${voiceoverVariantId}`)
+                  try {
                     const res = await fetch(
                       //wait-torrent-file/:
-                      `${BASE_API_URL}/books/wait-torrent-file/${voiceoverVariantId}`,
+                      `${BASE_API_URL}/books/processor/wait-torrent-file/${voiceoverVariantId}`,
                       {
                         method: 'POST',
                       },

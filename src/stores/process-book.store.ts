@@ -2,7 +2,7 @@ import { EMessageEvent, ERequestState } from '@/types/enums'
 import { defineStore } from 'pinia'
 
 const _fetchList = async () => {
-  const result = await fetch(`${import.meta.env.VITE__BASE_API_URL}/books/list-to-download`)
+  const result = await fetch(`${import.meta.env.VITE__BASE_API_URL}/books/processor/to-process`)
   return result.json()
 }
 
